@@ -1,0 +1,20 @@
+[
+  {
+    "WellName": "TEXTEN 0053LS",
+    "assmt": "Clean Up",
+    "subAssmt": "Fluid on Ground Tier 1: Priority Wells",
+    "userGroup": "Odessa FS",
+    "actn" : ".Diagnose/Execute",
+    "SAP" : "Yes",
+    "cmnt" : "Testing"
+  },
+  {
+    "WellName": "TEXTEN 0052LS",
+    "assmt": "Clean Up",
+    "subAssmt": "Fluid on Ground Tier 1: Priority Wells",
+    "userGroup": "Odessa FS",
+    "actn" : ".Diagnose/Execute",
+    "SAP" : "No",
+    "cmnt" : "Testing"
+  }
+]

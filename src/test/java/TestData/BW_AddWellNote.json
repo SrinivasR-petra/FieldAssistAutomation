@@ -1,0 +1,37 @@
+[
+  {
+    "_comment" : "---------- Beam Well's, Well Note ---------",
+    "WellName": "ASTRODOME 223LS",
+    "Comment": "Testing the adding of WellNote via Automation code"
+  },
+
+  {
+    "_comment" : "---------- ESP Well's, Well Note ---------",
+    "WellName": "SCHARB SE 2031US",
+    "Comment": "Testing the adding of WellNote via Automation code"
+  },
+
+  {
+    "_comment" : "---------- Gas Lift Well's, Well Note ---------",
+    "WellName": "ARTEMIS 4235H",
+    "Comment": "Testing the adding of WellNote via Automation code"
+  },
+
+  {
+    "_comment" : "---------- PAGL Well's, Well Note ---------",
+    "WellName": "SCHARB SE 23WB",
+    "Comment": "Testing the adding of WellNote via Automation code"
+  },
+
+  {
+    "_comment" : "---------- Down Well's, Well Note ---------",
+    "WellName": "C SCHARB 3411M",
+    "Comment": "Testing the adding of WellNote via Automation code"
+  },
+
+  {
+    "_comment" : "---------- NF Well's, Well Note ---------",
+    "WellName": "CMC RIBEYE 34/35 D 1123WB",
+    "Comment": "Testing the adding of WellNote via Automation code"
+  }
+]

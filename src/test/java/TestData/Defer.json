@@ -1,0 +1,48 @@
+[
+  {
+    "_comment" : "----------Beam wells Defer info----------",
+    "WellName" : "MID AC AF 11HB",
+    "Category" : "Data Issue",
+    "SubCategory" : "End Device",
+    "Days" : "5",
+    "Comment" : "Defer Testing",
+    "Undef_Comment" : "Defer Testing Completed"
+  },
+  {
+    "_comment" : "----------ESP wells Defer info----------",
+    "WellName" : "C SCHARB 4211M C2",
+    "Category" : "Underdisplaced",
+    "SubCategory" : "Unit Recently Downsized",
+    "Days" : "3",
+    "Comment" : "Defer Testing",
+    "Undef_Comment" : "Defer Testing Completed"
+  },
+  {
+    "_comment" : "----------Gas Lift wells Defer info----------",
+    "WellName" : "SCHARB SE 54LS",
+    "Category" : "Waiting on Maint.",
+    "SubCategory" : "Waiting on Maint.",
+    "Days" : "10",
+    "Comment" : "Defer Testing",
+    "Undef_Comment" : "Defer Testing Completed"
+  },
+  {
+    "_comment" : "----------PAGL wells Defer info----------",
+    "WellName" : "SCHARB SE 12LS",
+    "Category" : "Surface Facility Constraint",
+    "SubCategory" : "Facility Curtailment",
+    "Days" : "10",
+    "Comment" : "Defer Testing",
+    "Undef_Comment" : "Defer Testing Completed"
+  },
+  {
+    "_comment" : "----------FOP wells Defer info----------",
+    "WellName" : "MID AC AF 8HD",
+    "Category" : "Surface Facility Constraint",
+    "SubCategory" : "Facility Curtailment",
+    "Days" : "10",
+    "Comment" : "Defer Testing",
+    "Undef_Comment" : "Defer Testing Completed"
+  }
+
+]

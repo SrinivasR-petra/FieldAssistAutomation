@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MCBU_Testing">
+    <listeners>
+        <listener class-name="TestUtils.Listeners" />
+    </listeners>
+
+    <test name="faClientTests">
+        <classes>
+            <class name="faClientTests.AddWellNoteTests" />
+        </classes>
+    </test>
+</suite>
