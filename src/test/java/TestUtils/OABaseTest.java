@@ -17,24 +17,23 @@ import java.net.URISyntaxException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import static TestUtils.FABaseTest.*;
+
 public class OABaseTest extends FAUtils {
     public static WindowsDriver<WindowsElement> OASession = null;
-    public static String winAppDriverUrl;
-    public static String field;
+    private static String winAppDriverUrl, field;
     public static Producers producers;
-//    public static Process startWinAppDriver = null;
 
     @BeforeSuite(alwaysRun = true)
     public static void setUp() throws IOException, URISyntaxException, InterruptedException {
-//        String command = "C:\\Program Files (x86)\\Windows Application Driver\\WinAppDriver.exe";
-//        ProcessBuilder builder = new ProcessBuilder(command).inheritIO();
-//        startWinAppDriver = builder.start();
+
         Properties prop = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//resources//data.properties");
         prop.load(fis);
-        String ipAddress = prop.getProperty("ipAddress");
-        String port = prop.getProperty("port");
-        field = prop.getProperty("field");
+        String  ipAddress = System.getProperty("ipAddress") != null ? System.getProperty("ipAddress") : prop.getProperty("ipAddress");
+        String  port = System.getProperty("port") != null ? System.getProperty("port") : prop.getProperty("port");
+        field = System.getProperty("field") != null ? System.getProperty("field") : prop.getProperty("field");
+
         String winAppDriverLocation = prop.getProperty("winAppDriverLocation");
         winAppDriverUrl= startWinAppDriverApp(winAppDriverLocation, ipAddress, Integer.parseInt(port));
         OALaunch();

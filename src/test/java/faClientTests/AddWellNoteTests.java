@@ -3,6 +3,8 @@ package faClientTests;
 import TestUtils.FABaseTest;
 import org.example.pageobject.FieldAssist_Client.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.*;
 import utils.FAUtils;
 
@@ -10,12 +12,30 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+import static TestUtils.OABaseTest.OASession;
+
 
 public class AddWellNoteTests extends FABaseTest {
 
 
     @AfterMethod(alwaysRun = true)
     public void CloseTabs(){
+        if (OASession != null)
+            OASession.close();
+        boolean mainWindow = FASession.findElementByAccessibilityId("MapleMainForm").isEnabled();
+        if (!mainWindow) {
+            Actions actions = new Actions(FASession);
+            String parentWinHandle = FASession.getWindowHandle();
+            for (String handle : FASession.getWindowHandles()) {
+                if (!handle.equals(parentWinHandle)) {
+                    FASession.switchTo().window(handle);
+                    System.out.println("Switched to new window: " + FASession.getTitle());
+                }
+            }
+
+            actions.keyDown(Keys.ALT).sendKeys(Keys.F4).keyUp(Keys.ALT).build().perform();
+            FASession.switchTo().window(parentWinHandle);
+        }
         FASession.findElement(By.name("Windows")).click();
         FASession.findElement(By.name("Close All")).click();
     }
