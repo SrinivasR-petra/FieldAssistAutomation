@@ -17,25 +17,14 @@ import java.net.URISyntaxException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import static TestUtils.FABaseTest.*;
-
 public class OABaseTest extends FAUtils {
     public static WindowsDriver<WindowsElement> OASession = null;
-    private static String winAppDriverUrl, field;
     public static Producers producers;
 
     @BeforeSuite(alwaysRun = true)
-    public static void setUp() throws IOException, URISyntaxException, InterruptedException {
+    public static void setUp() throws IOException {
 
-        Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//src//main//resources//data.properties");
-        prop.load(fis);
-        String  ipAddress = System.getProperty("ipAddress") != null ? System.getProperty("ipAddress") : prop.getProperty("ipAddress");
-        String  port = System.getProperty("port") != null ? System.getProperty("port") : prop.getProperty("port");
-        field = System.getProperty("field") != null ? System.getProperty("field") : prop.getProperty("field");
-
-        String winAppDriverLocation = prop.getProperty("winAppDriverLocation");
-        winAppDriverUrl= startWinAppDriverApp(winAppDriverLocation, ipAddress, Integer.parseInt(port));
+        startWinAppDriverApp();
         OALaunch();
     }
 

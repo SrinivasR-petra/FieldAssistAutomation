@@ -76,7 +76,7 @@ public class Producers {
             }
         });
 
-
+        OASession.findElementByAccessibilityId("tbWellFilter").clear();
     }
 
     public void Click_StartJob_Button_And_data_entry(String Wellname, String JobAssessment, String JobAction, String Comment) {
