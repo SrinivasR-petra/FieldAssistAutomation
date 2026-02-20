@@ -9,12 +9,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import utils.FAUtils;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class OABaseTest extends FAUtils {

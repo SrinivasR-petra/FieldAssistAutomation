@@ -69,12 +69,14 @@ public class FABaseTest extends FAUtils {
             nfwells = new NFWells(FASession);
 
             FASession.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            Thread.sleep(2000);
+//            Thread.sleep(2000);
+
             List<WindowsElement> restoreDlg = FASession.findElementsByAccessibilityId("RestoreScreensSelectorDlg");
             if (!restoreDlg.isEmpty() && restoreDlg.getFirst().isDisplayed()) {
                 FASession.findElementByAccessibilityId("btnUncheckAll").click();
                 FASession.findElementByAccessibilityId("_btnOK").click();
             }
+
             FABaseTest.FieldSelection();
             FASession.manage().window().maximize();
         } catch (Exception e) {

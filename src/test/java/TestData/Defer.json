@@ -1,7 +1,7 @@
 [
   {
     "_comment" : "----------Beam wells Defer info----------",
-    "WellName" : "MID AC AF 11HB",
+    "WellName" : "C SCHARB 4123HB",
     "Category" : "Data Issue",
     "SubCategory" : "End Device",
     "Days" : "5",
@@ -10,7 +10,7 @@
   },
   {
     "_comment" : "----------ESP wells Defer info----------",
-    "WellName" : "C SCHARB 4211M C2",
+    "WellName" : "CRONUS 241JM",
     "Category" : "Underdisplaced",
     "SubCategory" : "Unit Recently Downsized",
     "Days" : "3",
@@ -37,7 +37,7 @@
   },
   {
     "_comment" : "----------FOP wells Defer info----------",
-    "WellName" : "MID AC AF 8HD",
+    "WellName" : "C SCHARB JR 82LS",
     "Category" : "Surface Facility Constraint",
     "SubCategory" : "Facility Curtailment",
     "Days" : "10",

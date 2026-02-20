@@ -5,6 +5,7 @@
     "subAssmt": "Fluid on Ground Tier 1: Priority Wells",
     "userGroup": "Odessa FS",
     "actn" : ".Diagnose/Execute",
+    "change_actn" : ".Diagnose/Execute",
     "SAP" : "Yes",
     "cmnt" : "Testing"
   },
@@ -14,6 +15,7 @@
     "subAssmt": "Fluid on Ground Tier 1: Priority Wells",
     "userGroup": "Odessa FS",
     "actn" : ".Diagnose/Execute",
+    "change_actn" : ".Diagnose/Execute",
     "SAP" : "No",
     "cmnt" : "Testing"
   }

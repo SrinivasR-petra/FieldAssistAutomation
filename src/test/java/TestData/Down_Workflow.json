@@ -5,6 +5,7 @@
     "subAssmt": "No Comm",
     "userGroup": "Odessa FS",
     "actn" : ".Diagnose/Execute",
+    "change_actn" : ".Diagnose/Execute",
     "SAP" : "No",
     "cmnt" : "Testing"
   }

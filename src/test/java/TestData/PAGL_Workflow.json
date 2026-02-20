@@ -5,6 +5,7 @@
     "subAssmt": "SlickLine",
     "userGroup": "Odessa FS",
     "actn" : ".Diagnose/Execute",
+    "change_actn" : ".Diagnose/Execute",
     "SAP" : "No",
     "cmnt" : "Testing"
   },
@@ -14,6 +15,7 @@
     "subAssmt": "Casing Valve",
     "userGroup": "Odessa FS",
     "actn" : "Casing Valve",
+    "change_actn" : ".Diagnose/Execute",
     "SAP" : "No",
     "cmnt" : "Testing"
   },
@@ -23,6 +25,7 @@
     "subAssmt": "Check Valve",
     "userGroup": "Odessa FS",
     "actn" : "Check Valve",
+    "change_actn" : ".Diagnose/Execute",
     "SAP" : "Yes",
     "cmnt" : "Testing"
   }

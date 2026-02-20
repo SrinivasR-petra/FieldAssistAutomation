@@ -4,16 +4,13 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.windows.WindowsDriver;
 import io.appium.java_client.windows.WindowsElement;
-import junit.framework.TestCase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class DownWells {
     private final WindowsDriver<WindowsElement> FASession;
@@ -34,6 +31,7 @@ public class DownWells {
     private By DW_WellsGrid = MobileBy.AccessibilityId("PSGrid");
     private By Grid_DataTable = MobileBy.AccessibilityId("tableControl1");
     private By WellMgmtChildTabs1 = MobileBy.AccessibilityId("WellMgmtChildTabs1");
+    private By DW_Details_TabItems = By.xpath("//Tab[@AutomationId=\"WellMgmtChildTabs1\"]/TabItem");
 
 
     public void Navigate_to_DownWells_AllWells_Screen_and_Select_a_Well(String DwellName) {
@@ -94,6 +92,43 @@ public class DownWells {
         }
         else
             System.out.println("Creation of Workflow is unsuccessful");
+    }
+
+    public void Verify_Workflow_is_Closed_Successfully(){
+        List<WindowsElement> tabItems = FASession.findElements(DW_Details_TabItems);
+        int tabs_size = tabItems.size();
+        for (int i = 0; i < tabs_size; i++) {
+            List<WindowsElement> jobsGrid = FASession.findElementsByName("WellMgmtJobsChildTabs");
+            if(!jobsGrid.isEmpty() && jobsGrid.getFirst().isDisplayed()){
+                jobsGrid.getFirst().click();
+                break;
+            }
+            else {
+                actions.sendKeys(Keys.ARROW_LEFT).build().perform();
+            }
+        }
+
+        String WorkflowsGridName = "";
+        List<WindowsElement> downWFGrid = FASession.findElementsByAccessibilityId("WellMgmtWFGridHSplt");
+
+        if (!downWFGrid.isEmpty() && downWFGrid.getFirst().isDisplayed()) {
+            WorkflowsGridName = downWFGrid.getFirst().getAttribute("Name");
+        }
+
+        System.out.println("Workflows grid name collected is : " + WorkflowsGridName);
+        var workflowsGrid = FASession.findElementByName(WorkflowsGridName);
+        var workflowsGridTable = workflowsGrid.findElementByAccessibilityId("tableControl1");
+        actions.moveToElement(workflowsGridTable, 15, 40).click().build().perform();
+        while (true) {
+            workflowsGridTable.sendKeys(Keys.TAB);
+            workflowsGridTable.sendKeys(Keys.F2);
+            List<MobileElement> finalAssessment = workflowsGridTable.findElementsByXPath("//*");
+            String finalResolution = finalAssessment.getLast().getAttribute("Value.Value");
+            if(finalResolution.equals("Successfully Completed")){
+                System.out.println("Workflow completed with Final Assessment : "+finalResolution);
+                break;
+            }
+        }
     }
 
     public void Verify_WellNote_is_added_or_not(String Comment){

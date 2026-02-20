@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">FA Test Results</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 18, 2026 10:15:04 AM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 20, 2026 06:20:41 AM</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('author-view')">
@@ -77,7 +72,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -91,25 +85,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author="SrinivasReddy"
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Create_a_BeamWell_Workflow</p>
             <p class="text-sm">
-              <span>10:15:33 AM</span> / <span>00:01:57:157</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>6:21:12 AM</span> / <span>00:03:55:542</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Create_a_BeamWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:15:33 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:17:30 AM</span>
-<span class='badge badge-default'>00:01:57:157</span>
+<h5 class="test-status text-pass">Create_a_BeamWell_Workflow</h5>
+<span class='badge badge-success'>02.20.2026 6:21:12 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:25:07 AM</span>
+<span class='badge badge-default'>00:03:55:542</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -122,65 +116,10 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:17:30 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:25:07 AM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.WebDriverException: Indicates that a command that should have executed properly cannot be supported for some reason. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SRINIVAS2', ip: '192.168.99.75', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {appTopLevelWindow: 1308c4, javascriptEnabled: true, platform: WINDOWS, platformName: Windows}
-Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:45)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
-	at TestUtils.OABaseTest.OALaunch(OABaseTest.java:77)
-	at faClientTests.WorkflowTests.Create_a_BeamWell_Workflow(WorkflowTests.java:52)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -195,7 +134,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_BeamWell_Workflow</p>
             <p class="text-sm">
-              <span>10:17:40 AM</span> / <span>00:03:49:850</span>
+              <span>6:25:10 AM</span> / <span>00:03:50:012</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -204,9 +143,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_BeamWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:17:40 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:21:29 AM</span>
-<span class='badge badge-default'>00:03:49:850</span>
+<span class='badge badge-success'>02.20.2026 6:25:10 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:29:00 AM</span>
+<span class='badge badge-default'>00:03:50:012</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -220,7 +159,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:21:29 AM</td>
+        <td>6:29:00 AM</td>
         <td>
           Test Passed
         </td>
@@ -237,7 +176,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_BeamWell_Workflow</p>
             <p class="text-sm">
-              <span>10:21:32 AM</span> / <span>00:03:48:100</span>
+              <span>6:29:02 AM</span> / <span>00:03:42:145</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -246,9 +185,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_BeamWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:21:32 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:25:20 AM</span>
-<span class='badge badge-default'>00:03:48:100</span>
+<span class='badge badge-success'>02.20.2026 6:29:02 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:32:44 AM</span>
+<span class='badge badge-default'>00:03:42:145</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -262,7 +201,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:25:20 AM</td>
+        <td>6:32:44 AM</td>
         <td>
           Test Passed
         </td>
@@ -279,7 +218,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_DownWell_Workflow</p>
             <p class="text-sm">
-              <span>10:25:23 AM</span> / <span>00:01:25:399</span>
+              <span>6:32:47 AM</span> / <span>00:03:43:706</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -288,9 +227,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_DownWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:25:23 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:01:25:399</span>
+<span class='badge badge-success'>02.20.2026 6:32:47 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:36:31 AM</span>
+<span class='badge badge-default'>00:03:43:706</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -304,7 +243,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:26:48 AM</td>
+        <td>6:36:31 AM</td>
         <td>
           Test Passed
         </td>
@@ -321,7 +260,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_ESPWell_Workflow</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>6:36:33 AM</span> / <span>00:03:52:005</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -330,9 +269,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_ESPWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 6:36:33 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:40:25 AM</span>
+<span class='badge badge-default'>00:03:52:005</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -340,7 +279,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:40:25 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="6"
           author="SrinivasReddy"
@@ -349,7 +302,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_ESPWell_Workflow</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>6:40:28 AM</span> / <span>00:03:17:189</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -358,9 +311,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_ESPWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 6:40:28 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:43:45 AM</span>
+<span class='badge badge-default'>00:03:17:189</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -368,7 +321,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:43:45 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="7"
           author="SrinivasReddy"
@@ -377,7 +344,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_ESPWell_Workflow</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>6:43:48 AM</span> / <span>00:03:02:059</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -386,9 +353,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_ESPWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 6:43:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:46:50 AM</span>
+<span class='badge badge-default'>00:03:02:059</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -396,7 +363,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:46:50 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="8"
           author="SrinivasReddy"
@@ -405,7 +386,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_FOP_Workflow_With_SAP</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>6:46:52 AM</span> / <span>00:04:53:270</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -414,9 +395,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_FOP_Workflow_With_SAP</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 6:46:52 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:51:46 AM</span>
+<span class='badge badge-default'>00:04:53:270</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -424,7 +405,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:51:46 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="9"
           author="SrinivasReddy"
@@ -433,7 +428,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_FOP_Workflow_Without_SAP</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>6:51:48 AM</span> / <span>00:04:52:808</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -442,9 +437,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_FOP_Workflow_Without_SAP</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 6:51:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 6:56:41 AM</span>
+<span class='badge badge-default'>00:04:52:808</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -452,7 +447,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:56:41 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="10"
           author="SrinivasReddy"
@@ -461,7 +470,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_GasLiftWell_Workflow</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>6:56:44 AM</span> / <span>00:03:34:419</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -470,9 +479,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_GasLiftWell_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 6:56:44 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:00:18 AM</span>
+<span class='badge badge-default'>00:03:34:419</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -480,7 +489,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:00:18 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="11"
           author="SrinivasReddy"
@@ -489,7 +512,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_NFWell_SurfaceMaintenance_Workflow_Without_SAP</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>7:00:21 AM</span> / <span>00:03:14:656</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -498,9 +521,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_NFWell_SurfaceMaintenance_Workflow_Without_SAP</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:00:21 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:03:36 AM</span>
+<span class='badge badge-default'>00:03:14:656</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -508,7 +531,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:03:36 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="12"
           author="SrinivasReddy"
@@ -517,7 +554,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_PAGLWell_SSPS_Workflow</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>7:03:38 AM</span> / <span>00:03:09:048</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -526,9 +563,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_PAGLWell_SSPS_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:03:38 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:06:47 AM</span>
+<span class='badge badge-default'>00:03:09:048</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -536,7 +573,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:06:47 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="13"
           author="SrinivasReddy"
@@ -545,7 +596,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_PAGLWell_SSPS_Workflow</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>7:06:50 AM</span> / <span>00:03:34:680</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -554,9 +605,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_PAGLWell_SSPS_Workflow</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:06:50 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:10:25 AM</span>
+<span class='badge badge-default'>00:03:34:680</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -564,7 +615,21 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:10:25 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="14"
           author="SrinivasReddy"
@@ -573,7 +638,7 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
           <div class="test-detail">
             <p class="name">Create_a_PAGLWell_SurfaceMaintenance_Workflow_With_SAP</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:00:000</span>
+              <span>7:10:27 AM</span> / <span>00:03:58:033</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -582,9 +647,9 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Create_a_PAGLWell_SurfaceMaintenance_Workflow_With_SAP</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:10:27 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:14:26 AM</span>
+<span class='badge badge-default'>00:03:58:033</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -592,27 +657,41 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:14:26 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
-        <li class="test-item"  status="fail" test-id="15"
+        <li class="test-item"  status="pass" test-id="15"
           author="SrinivasReddy"
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Add_a_WellNote_in_BeamWellsScreen</p>
             <p class="text-sm">
-              <span>10:26:48 AM</span> / <span>00:00:51:837</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>7:14:28 AM</span> / <span>00:01:19:865</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Add_a_WellNote_in_BeamWellsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:26:48 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:27:40 AM</span>
-<span class='badge badge-default'>00:00:51:837</span>
+<h5 class="test-status text-pass">Add_a_WellNote_in_BeamWellsScreen</h5>
+<span class='badge badge-success'>02.20.2026 7:14:28 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:15:48 AM</span>
+<span class='badge badge-default'>00:01:19:865</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -625,51 +704,10 @@ Session ID: 3ABCCCE7-5E21-47C6-94F3-6813D8C77D8D
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:27:40 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:15:48 AM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for org.example.pageobject.FieldAssist_Client.Common$$Lambda/0x00000000302d9208@7e1fb22c (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SRINIVAS2', ip: '192.168.99.75', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {appTopLevelWindow: 160a32, javascriptEnabled: true, platform: WINDOWS, platformName: Windows}
-Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at org.example.pageobject.FieldAssist_Client.Common.Click_EditCommentDlg_OK_Button(Common.java:193)
-	at faClientTests.AddWellNoteTests.Add_a_WellNote_in_BeamWellsScreen(AddWellNoteTests.java:49)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -684,7 +722,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Add_a_WellNote_in_DownWellsScreen</p>
             <p class="text-sm">
-              <span>10:27:41 AM</span> / <span>00:00:00:000</span>
+              <span>7:15:48 AM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -693,8 +731,8 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Add_a_WellNote_in_DownWellsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:27:41 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:27:41 AM</span>
+<span class='badge badge-success'>02.20.2026 7:15:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:15:48 AM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -712,7 +750,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Add_a_WellNote_in_ESPWellsScreen</p>
             <p class="text-sm">
-              <span>10:27:41 AM</span> / <span>00:00:00:000</span>
+              <span>7:15:48 AM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -721,8 +759,8 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Add_a_WellNote_in_ESPWellsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:27:41 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:27:41 AM</span>
+<span class='badge badge-success'>02.20.2026 7:15:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:15:48 AM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -740,7 +778,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Add_a_WellNote_in_GasLiftWellsScreen</p>
             <p class="text-sm">
-              <span>10:27:41 AM</span> / <span>00:00:00:000</span>
+              <span>7:15:48 AM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -749,8 +787,8 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Add_a_WellNote_in_GasLiftWellsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:27:41 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:27:41 AM</span>
+<span class='badge badge-success'>02.20.2026 7:15:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:15:48 AM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -768,7 +806,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Add_a_WellNote_in_NFWellsScreen</p>
             <p class="text-sm">
-              <span>10:27:41 AM</span> / <span>00:00:00:000</span>
+              <span>7:15:48 AM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -777,8 +815,8 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Add_a_WellNote_in_NFWellsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:27:41 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:27:41 AM</span>
+<span class='badge badge-success'>02.20.2026 7:15:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:15:48 AM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -796,7 +834,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Add_a_WellNote_in_PAGLWellsScreen</p>
             <p class="text-sm">
-              <span>10:27:41 AM</span> / <span>00:00:00:000</span>
+              <span>7:15:48 AM</span> / <span>00:00:00:000</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -805,8 +843,8 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Add_a_WellNote_in_PAGLWellsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:27:41 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:27:41 AM</span>
+<span class='badge badge-success'>02.20.2026 7:15:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:15:48 AM</span>
 <span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -817,25 +855,25 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 </div>          </div>
         </li>
-        <li class="test-item"  status="fail" test-id="21"
+        <li class="test-item"  status="pass" test-id="21"
           author="SrinivasReddy"
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Defer_BeamExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:27:41 AM</span> / <span>00:01:32:677</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>7:15:48 AM</span> / <span>00:00:57:004</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Defer_BeamExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:27:41 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:29:14 AM</span>
-<span class='badge badge-default'>00:01:32:677</span>
+<h5 class="test-status text-pass">Defer_BeamExceptionsScreen</h5>
+<span class='badge badge-success'>02.20.2026 7:15:48 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:16:45 AM</span>
+<span class='badge badge-default'>00:00:57:004</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -848,79 +886,10 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:29:14 AM</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:16:45 AM</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SRINIVAS2', ip: '192.168.99.75', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.2'
-Driver info: io.appium.java_client.windows.WindowsDriver
-Capabilities {appTopLevelWindow: 160a32, javascriptEnabled: true, platform: WINDOWS, platformName: Windows}
-Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
-*** Element info: {Using=name, value=BeamStatExcCurrHSplt}
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.execute(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.findElement(WindowsDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByName(DefaultGenericMobileDriver.java:117)
-	at io.appium.java_client.AppiumDriver.findElementByName(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.findElementByName(WindowsDriver.java:1)
-	at org.openqa.selenium.By$ByName.findElement(By.java:284)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.windows.WindowsDriver.findElement(WindowsDriver.java:1)
-	at org.example.pageobject.FieldAssist_Client.BeamWells.Navigate_to_BW_ExcCurrentGrid_and_Select_a_Well(BeamWells.java:204)
-	at faClientTests.DeferAndUnDeferTests.Defer_BeamExceptionsScreen(DeferAndUnDeferTests.java:32)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-</textarea>
-          
+          Test Passed
         </td>
       </tr>
   </tbody>
@@ -935,7 +904,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Defer_ESPExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:16:47 AM</span> / <span>00:01:04:753</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -944,9 +913,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Defer_ESPExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:16:47 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:17:51 AM</span>
+<span class='badge badge-default'>00:01:04:753</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -954,7 +923,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:17:51 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="23"
           author="SrinivasReddy"
@@ -963,7 +946,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Defer_GasLiftExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:17:53 AM</span> / <span>00:00:59:883</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -972,9 +955,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Defer_GasLiftExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:17:53 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:18:53 AM</span>
+<span class='badge badge-default'>00:00:59:883</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -982,7 +965,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:18:53 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="24"
           author="SrinivasReddy"
@@ -991,7 +988,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Defer_PAGLExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:18:54 AM</span> / <span>00:00:51:188</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1000,9 +997,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Defer_PAGLExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:18:54 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:19:45 AM</span>
+<span class='badge badge-default'>00:00:51:188</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1010,7 +1007,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:19:45 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="25"
           author="SrinivasReddy"
@@ -1019,7 +1030,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">Defer_a_well_in_FOPScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:19:47 AM</span> / <span>00:01:01:001</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1028,9 +1039,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Defer_a_well_in_FOPScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:19:47 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:20:48 AM</span>
+<span class='badge badge-default'>00:01:01:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1038,7 +1049,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:20:48 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="26"
           author="SrinivasReddy"
@@ -1047,7 +1072,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">UnDefer_BeamExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:20:49 AM</span> / <span>00:01:02:752</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1056,9 +1081,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">UnDefer_BeamExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:20:49 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:21:52 AM</span>
+<span class='badge badge-default'>00:01:02:752</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1066,7 +1091,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:21:52 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="27"
           author="SrinivasReddy"
@@ -1075,7 +1114,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">UnDefer_ESPExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:21:54 AM</span> / <span>00:01:00:616</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1084,9 +1123,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">UnDefer_ESPExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:21:54 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:22:54 AM</span>
+<span class='badge badge-default'>00:01:00:616</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1094,7 +1133,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:22:54 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="28"
           author="SrinivasReddy"
@@ -1103,7 +1156,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">UnDefer_GasLiftExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:22:56 AM</span> / <span>00:01:04:458</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1112,9 +1165,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">UnDefer_GasLiftExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:22:56 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:24:00 AM</span>
+<span class='badge badge-default'>00:01:04:458</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1122,7 +1175,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:24:00 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="29"
           author="SrinivasReddy"
@@ -1131,7 +1198,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">UnDefer_PAGLExceptionsScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:24:02 AM</span> / <span>00:00:55:875</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1140,9 +1207,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">UnDefer_PAGLExceptionsScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:24:02 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:24:58 AM</span>
+<span class='badge badge-default'>00:00:55:875</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1150,7 +1217,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:24:58 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="30"
           author="SrinivasReddy"
@@ -1159,7 +1240,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
           <div class="test-detail">
             <p class="name">UnDefer_a_well_in_FOPScreen</p>
             <p class="text-sm">
-              <span>10:30:46 AM</span> / <span>00:00:00:000</span>
+              <span>7:24:59 AM</span> / <span>00:02:26:554</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1168,9 +1249,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">UnDefer_a_well_in_FOPScreen</h5>
-<span class='badge badge-success'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-danger'>02.18.2026 10:30:46 AM</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>02.20.2026 7:24:59 AM</span>
+<span class='badge badge-danger'>02.20.2026 7:27:26 AM</span>
+<span class='badge badge-default'>00:02:26:554</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1178,7 +1259,21 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="m-t-15"><span class="badge badge-pill badge-default">SrinivasReddy</span></div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>7:27:26 AM</td>
+        <td>
+          Test Passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
       </ul>
     </div>
@@ -1189,122 +1284,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>10:26:48 AM</td>
-<td>
-<a href="#" class="linked" test-id='15' id='15'>Add_a_WellNote_in_BeamWellsScreen</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.WebDriverException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.WebDriverException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>10:15:33 AM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='1'>Create_a_BeamWell_Workflow</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">org.openqa.selenium.NoSuchElementException</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>org.openqa.selenium.NoSuchElementException</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>10:27:41 AM</td>
-<td>
-<a href="#" class="linked" test-id='21' id='21'>Defer_BeamExceptionsScreen</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-wrapper row view author-view attributes-view">
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
@@ -1315,8 +1295,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>27</span>
-<span class='badge log badge-danger'>3</span>
+<span class='badge log pass-bg'>30</span>
 </span>
 <p class="name">SrinivasReddy</p>
 <p class="duration text-sm">30 tests</p>
@@ -1324,8 +1303,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="test-contents d-none">
 <div class="info">
 <h4>SrinivasReddy</h4>
-<span status="pass" class='badge log pass-bg'>27 passed</span>
-<span status="fail" class='badge log badge-danger'>3 failed</span>
+<span status="pass" class='badge log pass-bg'>30 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1336,212 +1314,212 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>10:15:33 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>06:21:12 AM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>Create_a_BeamWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:40 AM</td>
+<td>06:25:10 AM</td>
 <td>
 <a href="#" class="linked" test-id='2' id='2'>Create_a_BeamWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:21:32 AM</td>
+<td>06:29:02 AM</td>
 <td>
 <a href="#" class="linked" test-id='3' id='3'>Create_a_BeamWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:25:23 AM</td>
+<td>06:32:47 AM</td>
 <td>
 <a href="#" class="linked" test-id='4' id='4'>Create_a_DownWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>06:36:33 AM</td>
 <td>
 <a href="#" class="linked" test-id='5' id='5'>Create_a_ESPWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>06:40:28 AM</td>
 <td>
 <a href="#" class="linked" test-id='6' id='6'>Create_a_ESPWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>06:43:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='7' id='7'>Create_a_ESPWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>06:46:52 AM</td>
 <td>
 <a href="#" class="linked" test-id='8' id='8'>Create_a_FOP_Workflow_With_SAP</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>06:51:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='9' id='9'>Create_a_FOP_Workflow_Without_SAP</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>06:56:44 AM</td>
 <td>
 <a href="#" class="linked" test-id='10' id='10'>Create_a_GasLiftWell_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>07:00:21 AM</td>
 <td>
 <a href="#" class="linked" test-id='11' id='11'>Create_a_NFWell_SurfaceMaintenance_Workflow_Without_SAP</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>07:03:38 AM</td>
 <td>
 <a href="#" class="linked" test-id='12' id='12'>Create_a_PAGLWell_SSPS_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>07:06:50 AM</td>
 <td>
 <a href="#" class="linked" test-id='13' id='13'>Create_a_PAGLWell_SSPS_Workflow</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:26:48 AM</td>
+<td>07:10:27 AM</td>
 <td>
 <a href="#" class="linked" test-id='14' id='14'>Create_a_PAGLWell_SurfaceMaintenance_Workflow_With_SAP</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>10:26:48 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>07:14:28 AM</td>
 <td>
 <a href="#" class="linked" test-id='15' id='15'>Add_a_WellNote_in_BeamWellsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:27:41 AM</td>
+<td>07:15:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='16' id='16'>Add_a_WellNote_in_DownWellsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:27:41 AM</td>
+<td>07:15:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='17' id='17'>Add_a_WellNote_in_ESPWellsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:27:41 AM</td>
+<td>07:15:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='18' id='18'>Add_a_WellNote_in_GasLiftWellsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:27:41 AM</td>
+<td>07:15:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='19' id='19'>Add_a_WellNote_in_NFWellsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:27:41 AM</td>
+<td>07:15:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='20' id='20'>Add_a_WellNote_in_PAGLWellsScreen</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>10:27:41 AM</td>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>07:15:48 AM</td>
 <td>
 <a href="#" class="linked" test-id='21' id='21'>Defer_BeamExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:16:47 AM</td>
 <td>
 <a href="#" class="linked" test-id='22' id='22'>Defer_ESPExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:17:53 AM</td>
 <td>
 <a href="#" class="linked" test-id='23' id='23'>Defer_GasLiftExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:18:54 AM</td>
 <td>
 <a href="#" class="linked" test-id='24' id='24'>Defer_PAGLExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:19:47 AM</td>
 <td>
 <a href="#" class="linked" test-id='25' id='25'>Defer_a_well_in_FOPScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:20:49 AM</td>
 <td>
 <a href="#" class="linked" test-id='26' id='26'>UnDefer_BeamExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:21:54 AM</td>
 <td>
 <a href="#" class="linked" test-id='27' id='27'>UnDefer_ESPExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:22:56 AM</td>
 <td>
 <a href="#" class="linked" test-id='28' id='28'>UnDefer_GasLiftExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:24:02 AM</td>
 <td>
 <a href="#" class="linked" test-id='29' id='29'>UnDefer_PAGLExceptionsScreen</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:30:46 AM</td>
+<td>07:24:59 AM</td>
 <td>
 <a href="#" class="linked" test-id='30' id='30'>UnDefer_a_well_in_FOPScreen</a>
 </td>
@@ -1563,25 +1541,25 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 18, 2026 10:15:04 AM</h3>
+<h3>Feb 20, 2026 06:20:41 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 18, 2026 10:30:46 AM</h3>
+<h3>Feb 20, 2026 07:27:27 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>27</h3>
+<h3>30</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>3</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -1597,12 +1575,12 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='90%'>
-<b>27</b> tests passed
+<div><small data-tooltip='100%'>
+<b>30</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='10%'><b>3</b> tests failed,
+<small data-tooltip='0%'><b>0</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1620,9 +1598,9 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='50%'><b>3</b> events passed</small></div>
+<div><small data-tooltip='100%'><b>25</b> events passed</small></div>
 <div>
-<small data-tooltip='50%'><b>3</b> events failed,
+<small data-tooltip='0%'><b>0</b> events failed,
 <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -1639,7 +1617,7 @@ Session ID: 2313371C-D3CE-4B26-BB77-C2F495903E27
 </div></div>
 <script>
 var timeline = {
-"Create_a_BeamWell_Workflow":117.157,"Create_a_BeamWell_Workflow":229.85,"Create_a_BeamWell_Workflow":228.1,"Create_a_DownWell_Workflow":85.399,"Create_a_ESPWell_Workflow":0,"Create_a_ESPWell_Workflow":0,"Create_a_ESPWell_Workflow":0,"Create_a_FOP_Workflow_With_SAP":0,"Create_a_FOP_Workflow_Without_SAP":0,"Create_a_GasLiftWell_Workflow":0,"Create_a_NFWell_SurfaceMaintenance_Workflow_Without_SAP":0,"Create_a_PAGLWell_SSPS_Workflow":0,"Create_a_PAGLWell_SSPS_Workflow":0,"Create_a_PAGLWell_SurfaceMaintenance_Workflow_With_SAP":0,"Add_a_WellNote_in_BeamWellsScreen":51.837,"Add_a_WellNote_in_DownWellsScreen":0,"Add_a_WellNote_in_ESPWellsScreen":0,"Add_a_WellNote_in_GasLiftWellsScreen":0,"Add_a_WellNote_in_NFWellsScreen":0,"Add_a_WellNote_in_PAGLWellsScreen":0,"Defer_BeamExceptionsScreen":92.677,"Defer_ESPExceptionsScreen":0,"Defer_GasLiftExceptionsScreen":0,"Defer_PAGLExceptionsScreen":0,"Defer_a_well_in_FOPScreen":0,"UnDefer_BeamExceptionsScreen":0,"UnDefer_ESPExceptionsScreen":0,"UnDefer_GasLiftExceptionsScreen":0,"UnDefer_PAGLExceptionsScreen":0,"UnDefer_a_well_in_FOPScreen":0
+"Create_a_BeamWell_Workflow":235.542,"Create_a_BeamWell_Workflow":230.012,"Create_a_BeamWell_Workflow":222.145,"Create_a_DownWell_Workflow":223.706,"Create_a_ESPWell_Workflow":232.005,"Create_a_ESPWell_Workflow":197.189,"Create_a_ESPWell_Workflow":182.059,"Create_a_FOP_Workflow_With_SAP":293.27,"Create_a_FOP_Workflow_Without_SAP":292.808,"Create_a_GasLiftWell_Workflow":214.419,"Create_a_NFWell_SurfaceMaintenance_Workflow_Without_SAP":194.656,"Create_a_PAGLWell_SSPS_Workflow":189.048,"Create_a_PAGLWell_SSPS_Workflow":214.68,"Create_a_PAGLWell_SurfaceMaintenance_Workflow_With_SAP":238.033,"Add_a_WellNote_in_BeamWellsScreen":79.865,"Add_a_WellNote_in_DownWellsScreen":0,"Add_a_WellNote_in_ESPWellsScreen":0,"Add_a_WellNote_in_GasLiftWellsScreen":0,"Add_a_WellNote_in_NFWellsScreen":0,"Add_a_WellNote_in_PAGLWellsScreen":0,"Defer_BeamExceptionsScreen":57.004,"Defer_ESPExceptionsScreen":64.753,"Defer_GasLiftExceptionsScreen":59.883,"Defer_PAGLExceptionsScreen":51.188,"Defer_a_well_in_FOPScreen":61.001,"UnDefer_BeamExceptionsScreen":62.752,"UnDefer_ESPExceptionsScreen":60.616,"UnDefer_GasLiftExceptionsScreen":64.458,"UnDefer_PAGLExceptionsScreen":55.875,"UnDefer_a_well_in_FOPScreen":146.554
 };
 </script>
 <div class="row">
@@ -1651,11 +1629,11 @@ var timeline = {
 <tbody>
 <tr>
 <td>SrinivasReddy</td>
-<td>27</td>
-<td>3</td>
+<td>30</td>
 <td>0</td>
 <td>0</td>
-<td>90%</td>
+<td>0</td>
+<td>100%</td>
 </tr>
 </tbody>
 </table></div>
@@ -1666,8 +1644,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 27,
-failParent: 3,
+passParent: 30,
+failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1683,8 +1661,8 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 3,
-failEvents: 3,
+passEvents: 25,
+failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
 infoEvents: 0

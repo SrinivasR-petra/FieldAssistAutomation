@@ -58,7 +58,7 @@ public class Producers {
 //    }
 
     public void Select_a_Well(String Wellname) {
-        var allWellsGrid = OASession.findElementByAccessibilityId("AllWellsGrid");
+//        var allWellsGrid = OASession.findElementByAccessibilityId("AllWellsGrid");
         OASession.findElementByAccessibilityId("tbWellFilter").sendKeys(Wellname);
         wait.until((ExpectedCondition<Boolean>) d -> {
             try {
@@ -281,7 +281,7 @@ public class Producers {
             JDGrid.findElementByName("Fluid Level From Surface").click();
             jd_actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(FluidLevel).build().perform();
             JDGrid.findElementByName("EC Comment").click();
-            jd_actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys("EC_Comment").build().perform();
+            jd_actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(EC_Comment).build().perform();
         }
     }
 
@@ -321,7 +321,7 @@ public class Producers {
         OASession.findElementByName("Inbox").click();
         var Results_Inbox = OASession.findElementByAccessibilityId("gridInbox");
         var DGV_Headers = Results_Inbox.findElementByAccessibilityId("PART_ColumnHeadersPresenter");
-        String Name_header = null, JType_header = null, Assmt_header = null, Actn_header = null;
+        String Name_header, JType_header, Assmt_header, Actn_header;
 
         Name_header = DGV_Headers.findElementByName("Name").getAttribute("PositionInSet");
         JType_header = DGV_Headers.findElementByName("Job Type").getAttribute("PositionInSet");
@@ -399,7 +399,7 @@ public class Producers {
         OASession.findElementByName("Closed").click();
         var Results_Closed = OASession.findElementByAccessibilityId("gridClosed");
         var DGV_Headers = Results_Closed.findElementByAccessibilityId("PART_ColumnHeadersPresenter");
-        String Name_header = null, JType_header = null, Assmt_header = null, Actn_header = null;
+        String Name_header, JType_header, Assmt_header, Actn_header;
 
         Name_header = DGV_Headers.findElementByName("Name").getAttribute("PositionInSet");
         JType_header = DGV_Headers.findElementByName("Job Type").getAttribute("PositionInSet");

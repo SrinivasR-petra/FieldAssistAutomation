@@ -87,6 +87,37 @@ public class FOP {
         }
     }
 
+    public void Verify_Workflow_is_Closed_Successfully() {
+        //For validating the workflow is created or not the Workflows child grid should be displayed with StartDate as first column, Initial Assessment as second column and Action as third column.
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        String WorkflowsGridName = "";
+        List<WindowsElement> beamWFGrid = FASession.findElements(FOP_WFGrid);
+
+        if (!beamWFGrid.isEmpty() && beamWFGrid.getFirst().isDisplayed()) {
+            WorkflowsGridName = beamWFGrid.getFirst().getAttribute("Name");
+        }
+
+        System.out.println("Workflows grid name collected is : " + WorkflowsGridName);
+        var workflowsGrid = FASession.findElementByName(WorkflowsGridName);
+        var workflowsGridTable = workflowsGrid.findElement(Grid_DataTable);
+        //actions.click(workflowsGridTable).keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_UP).sendKeys(Keys.ARROW_LEFT).keyUp(Keys.CONTROL).build().perform();
+        actions.moveToElement(workflowsGridTable, 15, 40).click().build().perform();
+        while (true) {
+            workflowsGridTable.sendKeys(Keys.TAB);
+            workflowsGridTable.sendKeys(Keys.F2);
+            List<MobileElement> finalAssessment = workflowsGridTable.findElementsByXPath("//*");
+            String finalResolution = finalAssessment.getLast().getAttribute("Value.Value");
+            if(finalResolution.equals("Successfully Completed")){
+                System.out.println("Workflow completed with Final Assessment : "+finalResolution);
+                break;
+            }
+        }
+    }
+
     public void Select_Well_from_Reviewed_Tab(String DwellName){
         MobileElement reviewedGrid = FASession.findElement(FOP_Rev_Def_WellsGrid);
         MobileElement wellDataGrid = reviewedGrid.findElement(Grid_DataTable);

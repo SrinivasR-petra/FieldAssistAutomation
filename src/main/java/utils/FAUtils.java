@@ -35,9 +35,8 @@ public abstract class FAUtils {
     public static List<HashMap<String, String>> getJsonData(String jsonFilePath) throws IOException {
         String jsonContent = FileUtils.readFileToString(new File(jsonFilePath), StandardCharsets.UTF_8);
         ObjectMapper objectMapper = new ObjectMapper();
-        List<HashMap<String, String>> data = objectMapper.readValue(jsonContent, new TypeReference<>() {
+        return objectMapper.readValue(jsonContent, new TypeReference<>() {
         });
-        return data;
     }
 
     public static void Switch_to_ParentWindow(WindowsDriver<WindowsElement> driver){

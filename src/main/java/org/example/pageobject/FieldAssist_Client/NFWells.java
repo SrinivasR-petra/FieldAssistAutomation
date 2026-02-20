@@ -84,6 +84,37 @@ public class NFWells {
             System.out.println("Creation of Workflow is unsuccessful");
     }
 
+    public void Verify_Workflow_is_Closed_Successfully() {
+        //For validating the workflow is created or not the Workflows child grid should be displayed with StartDate as first column, Initial Assessment as second column and Action as third column.
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        String WorkflowsGridName = "";
+        List<WindowsElement> nfWFGrid = FASession.findElements(NF_WFGrid);
+
+        if (!nfWFGrid.isEmpty() && nfWFGrid.getFirst().isDisplayed()) {
+            WorkflowsGridName = nfWFGrid.getFirst().getAttribute("Name");
+        }
+
+        System.out.println("Workflows grid name collected is : " + WorkflowsGridName);
+        var workflowsGrid = FASession.findElementByName(WorkflowsGridName);
+        var workflowsGridTable = workflowsGrid.findElement(Grid_DataTable);
+        //actions.click(workflowsGridTable).keyDown(Keys.CONTROL).sendKeys(Keys.ARROW_UP).sendKeys(Keys.ARROW_LEFT).keyUp(Keys.CONTROL).build().perform();
+        actions.moveToElement(workflowsGridTable, 15, 40).click().build().perform();
+        while (true) {
+            workflowsGridTable.sendKeys(Keys.TAB);
+            workflowsGridTable.sendKeys(Keys.F2);
+            List<MobileElement> finalAssessment = workflowsGridTable.findElementsByXPath("//*");
+            String finalResolution = finalAssessment.getLast().getAttribute("Value.Value");
+            if(finalResolution.equals("Successfully Completed")){
+                System.out.println("Workflow completed with Final Assessment : "+finalResolution);
+                break;
+            }
+        }
+    }
+
     public void Verify_WellNote_is_added_or_not(String Comment){
         MobileElement nfAllWells = FASession.findElement(NF_AllWells_WellsGrid);
         MobileElement wellDataGrid = nfAllWells.findElement(Grid_DataTable);

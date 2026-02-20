@@ -81,8 +81,16 @@ public class WorkflowTests extends FABaseTest {
         glWells.Navigate_to_GasLift_AllWells_Screen_and_Select_a_Well(input.get("WellName"));
         common.Click_StartWorkflow_Button();
         common.Start_WorkflowDlg_DataFilling(input.get("assmt"), input.get("subAssmt") ,  input.get("userGroup"), input.get("actn"), input.get("SAP"), input.get("cmnt"));
-        //common.Click_OK_Button();
+        common.Click_OK_Button();
         glWells.Validate_FA_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        OALaunch();
+        producers.OA_WFEdit(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"), input.get("change_actn"), input.get("cmnt") );
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Tick_All_Tasks_As_Done_In_Alarms_TaskListTab();
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        glWells.Verify_Workflow_is_Closed_Successfully();
     }
 
     @Test (dataProvider = "PAGL_WF", groups = {"Smoke"})
@@ -93,6 +101,13 @@ public class WorkflowTests extends FABaseTest {
         common.Start_WorkflowDlg_DataFilling(input.get("assmt"), input.get("subAssmt") ,  input.get("userGroup"), input.get("actn"), input.get("SAP"), input.get("cmnt"));
         common.Click_OK_Button();
         pagl.Validate_FA_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        OALaunch();
+        producers.OA_WFEdit(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"), input.get("change_actn"), input.get("cmnt") );
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        pagl.Verify_Workflow_is_Closed_Successfully();
     }
 
     @Test (dataProvider = "PAGL_SAPWF", groups = {"Smoke"})
@@ -104,6 +119,13 @@ public class WorkflowTests extends FABaseTest {
         common.Navigate_to_SAPTab_and_Enter_Details();
         common.Click_OK_Button();
         pagl.Validate_FA_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        OALaunch();
+        producers.OA_WFEdit(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"), input.get("change_actn"), input.get("cmnt") );
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        pagl.Verify_Workflow_is_Closed_Successfully();
     }
 
     @Test (dataProvider = "Down_WF", groups = {"Smoke"})
@@ -115,6 +137,14 @@ public class WorkflowTests extends FABaseTest {
         common.Start_WorkflowDlg_DataFilling(input.get("assmt"), input.get("subAssmt") ,  input.get("userGroup"), input.get("actn"), input.get("SAP"), input.get("cmnt"));
         common.Click_OK_Button();
         downWells.Validate_FA_DownWell_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        OALaunch();
+        producers.OA_WFEdit(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"), input.get("change_actn"), input.get("cmnt") );
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Tick_All_Tasks_As_Done_In_Alarms_TaskListTab();
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        downWells.Verify_Workflow_is_Closed_Successfully();
     }
 
     @Test (dataProvider = "FOP_SAPWF", groups = {"Smoke"})
@@ -130,16 +160,13 @@ public class WorkflowTests extends FABaseTest {
         common.Click_OK_Button();
         fop.Validate_FA_FOPWell_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         fop.Verify_well_moved_to_ReviewedGrid(input.get("WellName"));
-    }
-
-    @Test (dataProvider = "NF_WF", groups = {"Smoke"})
-    //Template Id = 10433
-    public void Create_a_NFWell_SurfaceMaintenance_Workflow_Without_SAP(HashMap<String,String> input) {
-        nfwells.Navigate_to_NFWells_AllWells_Screen_and_Select_a_Well(input.get("WellName"));
-        common.Click_StartWorkflow_Button();
-        common.Start_WorkflowDlg_DataFilling(input.get("assmt"), input.get("subAssmt") ,  input.get("userGroup"), input.get("actn"), input.get("SAP"), input.get("cmnt"));
-        common.Click_OK_Button();
-        nfwells.Validate_FA_NFWell_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        OALaunch();
+        producers.OA_WFEdit(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"), input.get("change_actn"), input.get("cmnt") );
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        fop.Verify_Workflow_is_Closed_Successfully();
     }
 
     @Test (dataProvider = "FOP_WF", groups = {"Smoke"})
@@ -154,6 +181,30 @@ public class WorkflowTests extends FABaseTest {
         common.Click_OK_Button();
         fop.Validate_FA_FOPWell_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         fop.Verify_well_moved_to_ReviewedGrid(input.get("WellName"));
+        OALaunch();
+        producers.OA_WFEdit(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"), input.get("change_actn"), input.get("cmnt") );
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        fop.Verify_Workflow_is_Closed_Successfully();
+    }
+
+    @Test (dataProvider = "NF_WF", groups = {"Smoke"})
+    //Template Id = 10433
+    public void Create_a_NFWell_SurfaceMaintenance_Workflow_Without_SAP(HashMap<String,String> input) {
+        nfwells.Navigate_to_NFWells_AllWells_Screen_and_Select_a_Well(input.get("WellName"));
+        common.Click_StartWorkflow_Button();
+        common.Start_WorkflowDlg_DataFilling(input.get("assmt"), input.get("subAssmt") ,  input.get("userGroup"), input.get("actn"), input.get("SAP"), input.get("cmnt"));
+        common.Click_OK_Button();
+        nfwells.Validate_FA_NFWell_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        OALaunch();
+        producers.OA_WFEdit(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"), input.get("change_actn"), input.get("cmnt") );
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        nfwells.Verify_Workflow_is_Closed_Successfully();
     }
 
 
