@@ -35,8 +35,6 @@ public class Producers {
             OASession.findElementByName("Producers").click();
         }
         OASession.findElementByName("Wells").click();
-
-
     }
 
 //    public void ScrollDown_To_An_Well_In_ProducersScreen(String Wellname) {
@@ -420,7 +418,6 @@ public class Producers {
         wait.until((ExpectedCondition<Boolean>) d -> {
             try {
                 System.out.println("Waiting started for well in Closed Tab....");
-                //var newText = Results_Inbox.findElementsByClassName("DataGridRow").getFirst().findElementsByClassName("DataGridCell").getFirst().findElementByName(WName);
                 var newText = d.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst();
                 String gridWellName = newText.getAttribute("Name");
                 System.out.println("Well Name captured from first row is : " + gridWellName);

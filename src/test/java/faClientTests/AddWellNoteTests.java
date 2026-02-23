@@ -20,24 +20,26 @@ public class AddWellNoteTests extends FABaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void CloseTabs(){
-        if (OASession != null)
-            OASession.close();
-        boolean mainWindow = FASession.findElementByAccessibilityId("MapleMainForm").isEnabled();
-        if (!mainWindow) {
-            Actions actions = new Actions(FASession);
-            String parentWinHandle = FASession.getWindowHandle();
-            for (String handle : FASession.getWindowHandles()) {
-                if (!handle.equals(parentWinHandle)) {
-                    FASession.switchTo().window(handle);
-                    System.out.println("Switched to new window: " + FASession.getTitle());
+        try {
+            boolean mainWindow = FASession.findElementByAccessibilityId("MapleMainForm").isEnabled();
+            if (!mainWindow) {
+                Actions actions = new Actions(FASession);
+                String parentWinHandle = FASession.getWindowHandle();
+                for (String handle : FASession.getWindowHandles()) {
+                    if (!handle.equals(parentWinHandle)) {
+                        FASession.switchTo().window(handle);
+                        System.out.println("Switched to new window: " + FASession.getTitle());
+                    }
                 }
-            }
 
-            actions.keyDown(Keys.ALT).sendKeys(Keys.F4).keyUp(Keys.ALT).build().perform();
-            FASession.switchTo().window(parentWinHandle);
+                actions.keyDown(Keys.ALT).sendKeys(Keys.F4).keyUp(Keys.ALT).build().perform();
+                FASession.switchTo().window(parentWinHandle);
+            }
+            FASession.findElement(By.name("Windows")).click();
+            FASession.findElement(By.name("Close All")).click();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
-        FASession.findElement(By.name("Windows")).click();
-        FASession.findElement(By.name("Close All")).click();
     }
 
 
