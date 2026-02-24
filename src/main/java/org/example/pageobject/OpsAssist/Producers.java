@@ -5,14 +5,13 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.functions.ExpectedCondition;
 import io.appium.java_client.windows.WindowsDriver;
 import io.appium.java_client.windows.WindowsElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -26,6 +25,7 @@ public class Producers {
     public Producers(WindowsDriver<WindowsElement> OASession) {
         this.OASession = OASession;
         wait = new WebDriverWait(OASession, 20);
+        wait.pollingEvery(Duration.ofSeconds(1));
     }
 
     public void Navigate_to_Wells_Producers_Screen() {
@@ -327,11 +327,11 @@ public class Producers {
         Actn_header = DGV_Headers.findElementByName("Action").getAttribute("PositionInSet");
 
         int nameIndex = Integer.parseInt(Name_header) - 1;
-        int jtpeIndex = Integer.parseInt(JType_header) - 1;
+        int jtypeIndex = Integer.parseInt(JType_header) - 1;
         int assmtIndex = Integer.parseInt(Assmt_header) - 1;
         int actnIndex = Integer.parseInt(Actn_header) - 1;
 
-        JType_header = Integer.toString(jtpeIndex);
+        JType_header = Integer.toString(jtypeIndex);
         Name_header = Integer.toString(nameIndex);
         Assmt_header = Integer.toString(assmtIndex);
         Actn_header = Integer.toString(actnIndex);

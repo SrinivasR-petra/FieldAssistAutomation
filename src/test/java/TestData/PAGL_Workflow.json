@@ -15,7 +15,7 @@
     "subAssmt": "Casing Valve",
     "userGroup": "Odessa FS",
     "actn" : "Casing Valve",
-    "change_actn" : ".Diagnose/Execute",
+    "change_actn" : "Casing Valve",
     "SAP" : "No",
     "cmnt" : "Testing"
   },
@@ -25,7 +25,7 @@
     "subAssmt": "Check Valve",
     "userGroup": "Odessa FS",
     "actn" : "Check Valve",
-    "change_actn" : ".Diagnose/Execute",
+    "change_actn" : "Check Valve",
     "SAP" : "Yes",
     "cmnt" : "Testing"
   }
