@@ -60,13 +60,16 @@ public class OpsAssistTests extends OABaseTest {
 
     @Test
     public void Optimization_With_JobData_Workflow() {
-        String wellname = "SCHARB 31LS", JobType = "Optimization", IniAssessment = "Casing Blowdown Procedure", Actns = "Complete to Atmosphere", Comment = "Testing";
+        String wellname = "SCHARB 31LS", JobType = "Optimization", IniAssessment = "Casing Blowdown Procedure", Actns = ".Evaluate/Execute", Action_Change = "Complete to Atmosphere", Comment = "Testing", Comment_Change = "Automation Testing";
         producers.Navigate_to_Wells_Producers_Screen();
         producers.Select_a_Well(wellname);
         producers.Click_StartJob_Button_And_data_entry(wellname, IniAssessment, Actns, Comment);
-        producers.Optimization_JobDataTab();
         producers.Click_OK_Button();
-        producers.Verify_the_Workflow_is_closed(wellname, JobType, IniAssessment, Actns);
+        producers.OA_WFEdit(wellname, JobType, IniAssessment, Actns,Action_Change,Comment_Change);
+        producers.Optimization_JobDataTab();
+        producers.Completed_RadioButton_should_be_selected();
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(wellname, JobType, IniAssessment, Action_Change);
     }
 
     @Test
@@ -81,7 +84,19 @@ public class OpsAssistTests extends OABaseTest {
         producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
         producers.Click_OK_Button();
         producers.Verify_the_Workflow_is_closed(wellname, JobType, IniAssessment, Action_Change);
+    }
 
+    @Test
+    public void OtherWellTest_With_CancelOrCompletedAction() {
+        String wellname = "ARTEMIS 51LS", JobType = "Other", IniAssessment = "Well Test", Actns = ".Need Well Test", Action_Change = "Cancel", Comment = "Testing", Comment_Change = "Automation Testing";
+        producers.Navigate_to_Wells_Producers_Screen();
+        producers.Select_a_Well(wellname);
+        producers.Click_StartJob_Button_And_data_entry(wellname, IniAssessment, Actns, Comment);
+        producers.Click_OK_Button();
+        producers.OA_WFEdit(wellname, JobType, IniAssessment, Actns,Action_Change,Comment_Change);
+        producers.Completed_RadioButton_should_be_selected();
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(wellname, JobType, IniAssessment, Action_Change);
     }
 
     @Test

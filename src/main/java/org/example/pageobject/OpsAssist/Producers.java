@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import javax.swing.*;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -107,6 +108,12 @@ public class Producers {
 
     public void Select_Radio_Button_Fron_Edit_Job_Dialog(String RadioButton) {
         OASession.findElementByName(RadioButton).click();
+    }
+
+    public void Completed_RadioButton_should_be_selected(){
+        WindowsElement rbCompletedTxt = OASession.findElementByAccessibilityId("Self");
+        WindowsElement rbCompletedBtn = (WindowsElement) rbCompletedTxt.findElementByXPath("//Text[@Name='Completed']/preceding-sibling::RadioButton[1]");
+        Assert.assertTrue(rbCompletedBtn.isSelected());
     }
 
     public void CreateSAP_Yes_No(String SAP_Option) {
@@ -414,11 +421,10 @@ public class Producers {
         Assmt_header = Integer.toString(assmtIndex);
         Actn_header = Integer.toString(actnIndex);
 
-
         wait.until((ExpectedCondition<Boolean>) d -> {
             try {
                 System.out.println("Waiting started for well in Closed Tab....");
-                var newText = d.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst();
+                WindowsElement newText = (WindowsElement) d.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst();
                 String gridWellName = newText.getAttribute("Name");
                 System.out.println("Well Name captured from first row is : " + gridWellName);
                 boolean wellVisibility = Objects.equals(WName, gridWellName);
@@ -430,12 +436,12 @@ public class Producers {
             }
         });
 
-        var DGV_Cells = Results_Closed.findElementsByClassName("DataGridRow");
+        List<MobileElement> DGV_Cells = Results_Closed.findElementsByClassName("DataGridRow");
         for (MobileElement selWF : DGV_Cells) {
             String cellWname = null, cellJType = null, cellIniAssmt = null, cellAct = null;
             List<MobileElement> dataGridCell = selWF.findElementsByClassName("DataGridCell");
             for (MobileElement cell : dataGridCell) {
-                var gridHeader = cell.getAttribute("GridItem.Column");
+                String gridHeader = cell.getAttribute("GridItem.Column");
 
                 if (Objects.equals(Name_header, gridHeader)) {
                     cellWname = cell.getAttribute("Name");
