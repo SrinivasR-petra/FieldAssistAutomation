@@ -18,6 +18,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
+import static TestUtils.OABaseTest.producers;
+
 public class OA_DataDrivenTests extends OABaseTest {
     @Test(priority = 2)
     public void Verify_workflows_Completed_in_Closed_tab() throws IOException {
@@ -143,7 +145,13 @@ public class OA_DataDrivenTests extends OABaseTest {
 
                 System.out.println("Data acquired from spreadsheet:");
                 System.out.println("Well Name:" + DwellName + " Assessment: " + assmt + " Sub-Assmt: " + subAssmt + "Changed Comment: " + editCmnt);
-                producers.OA_WFEdit(DwellName, assmt, subAssmt, actn, chng_Actn, editCmnt);
+                producers.Navigate_to_MyJobs_tab();
+                producers.Navigate_to_MyJobs_Inbox();
+                producers.Verify_workflow_is_created_and_displayed_in_inbox(DwellName, assmt, subAssmt);
+                producers.Click_EditJob_button();
+                producers.Change_Action_in_EditJobDialog(chng_Actn);
+                producers.Enter_Comment_in_EditJobDialog(editCmnt);
+                producers.Click_OK_Button();
             }
             workbook.close();
         }
