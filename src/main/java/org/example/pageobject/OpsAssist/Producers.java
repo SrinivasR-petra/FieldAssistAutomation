@@ -10,7 +10,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import javax.swing.*;
@@ -157,7 +156,7 @@ public class Producers {
     public void AssignTo_an_User_or_Group(String GroupOrUser, String GroupOrUserName){
         OASession.findElementByName("Assign to").isDisplayed();
         OASession.findElementByName(GroupOrUser).click();
-        OASession.findElementByXPath("//Text[@Name='Assign to']/following-sibling::ComboBox").sendKeys(GroupOrUserName);
+        OASession.findElementByAccessibilityId("dlgTabs").findElementByAccessibilityId("PART_EditableTextBox").sendKeys(GroupOrUserName);
     }
 
     public void CreateSAP_Yes_No(String SAP_Option) {
@@ -356,10 +355,17 @@ public class Producers {
         }
     }
 
-        public void Verify_the_Workflow_is_closed(String WName, String JobType, String IniAssessment, String Chang_Acts) {
+    public void Verify_the_Workflow_is_closed(String WName, String JobType, String IniAssessment, String Chang_Acts) {
         OASession.findElementByName("_tabSchedule").click();
         wait.until(ExpectedConditions.elementToBeClickable(By.name("Closed")));
         OASession.findElementByName("Closed").click();
+
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+
         var Results_Closed = OASession.findElementByAccessibilityId("gridClosed");
         var DGV_Headers = Results_Closed.findElementByAccessibilityId("PART_ColumnHeadersPresenter");
         String Name_header, JType_header, Assmt_header, Actn_header;
@@ -379,18 +385,25 @@ public class Producers {
         Assmt_header = Integer.toString(assmtIndex);
         Actn_header = Integer.toString(actnIndex);
 
-        wait.until((ExpectedCondition<Boolean>) d -> {
-            try {
-                WindowsElement newText = (WindowsElement) d.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst();
-                String gridWellName = newText.getAttribute("Name");
-                boolean wellVisibility = Objects.equals(WName, gridWellName);
-                newText = null;
-                return wellVisibility;
-            } catch (WebDriverException e) {
-                // Element might temporarily disappear during refresh
-                return false;
-            }
-        });
+//        var appWellName = OASession.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst().getAttribute("Name");
+//
+//        if (appWellName.equals(WName)) {
+//            OASession.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst().findElementByName(WName).click();
+//        }
+//        else{
+//            wait.until((ExpectedCondition<Boolean>) d -> {
+//                try {
+//                    WindowsElement newText = (WindowsElement) d.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst();
+//                    String gridWellName = newText.getAttribute("Name");
+//                    boolean wellVisibility = Objects.equals(WName, gridWellName);
+//                    newText = null;
+//                    return wellVisibility;
+//                } catch (WebDriverException e) {
+//                    // Element might temporarily disappear during refresh
+//                    return false;
+//                }
+//            });
+//        }
 
         List<MobileElement> DGV_Cells = Results_Closed.findElementsByClassName("DataGridRow");
         for (MobileElement selWF : DGV_Cells) {
@@ -429,33 +442,6 @@ public class Producers {
         }
 
     }
-//    public void CreateSAP(String SAP_Option, String WellType) {
-//        Actions oa_actions = new Actions(OASession);
-//        var SAPDisplayed = OASession.findElementByName("Create SAP Job?").isDisplayed();
-//        if (SAPDisplayed) {
-//            if (SAP_Option.equals("Yes")) {
-//                OASession.findElementByName("Yes").click();
-//                OASession.findElementByName("This will create a job in SAP").isDisplayed();
-//                var display = OASession.findElementByName("SAP").isDisplayed();
-//                Assert.assertTrue(display);
-//                OASession.findElementByName("SAP").click();
-//                var sapTab = OASession.findElementByAccessibilityId("dlgTabs");
-//                oa_actions.sendKeys("SAP Job").build().perform();   // SAP Description
-//                oa_actions.sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys("0008").sendKeys(Keys.ENTER).build().perform(); // Detection Method
-//                oa_actions.sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys("5").sendKeys(Keys.ENTER).build().perform(); // Priority
-//                List<MobileElement> childEquip = sapTab.findElementsByName("Child Equipment");
-//                if (!childEquip.isEmpty() && childEquip.getFirst().isDisplayed()) {
-//                    oa_actions.sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
-//                }else oa_actions.sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys("FFCA").sendKeys(Keys.ENTER).build().perform();
-//                oa_actions.sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys("F047").sendKeys(Keys.ENTER).build().perform(); // Notification Code
-//                oa_actions.sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys("5004").sendKeys(Keys.ENTER).build().perform(); // Work Center
-//                oa_actions.sendKeys(Keys.TAB).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys("1").sendKeys(Keys.ENTER).build().perform(); // Production Effect
-//
-//            } else if (SAP_Option.equals("No")) {
-//                OASession.findElementByName("No").click();
-//            }
-//        }
-//    }
 
     public void Tick_All_Tasks_As_Done_In_Alarms_TaskListTab(){
         List<MobileElement> taskLists = OASession.findElementByAccessibilityId("dlgTabs").findElementsByName("Task List");
@@ -476,64 +462,67 @@ public class Producers {
     }
 
     public void Select_NextJobAction(String NextAction){
-        MobileElement nAction = OASession.findElementByXPath("//Text[@Name='Action']/following-sibling::ComboBox[2]");
-        nAction.sendKeys(NextAction);
+//        MobileElement nAction = OASession.findElementByXPath("//Text[@Name='Action']/following-sibling::ComboBox[2]");
+//        nAction.sendKeys(NextAction);
+        Actions OA_actions = new Actions(OASession);
+        OASession.findElementByName("Comment...").click();
+        OA_actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).build().perform();
+        OA_actions.sendKeys(Keys.ARROW_DOWN).sendKeys(NextAction).build().perform();
     }
 
     public void Verify_the_NextAction_Job_Info_is_Displayed_at_bottom(String Action, String NextAction){
         MobileElement startJobDlg = OASession.findElementByAccessibilityId("Self");
         String nextJobMsg = startJobDlg.findElement(By.xpath("//Text[contains(@Name,'This will create a new job')]")).getText();
-        String msgShouldBe = "This will create a new job: "+Action+" - "+NextAction;
+        String msgShouldBe = "This will create a new job:  "+Action+" - "+NextAction;
         if(nextJobMsg.contains(msgShouldBe)){
             System.out.println("The next job info has been displayed at bottom of the dialog");
         }
     }
 
-    public void Verify_workflow_is_created_and_displayed_in_inbox(String WName, String JobType, String IniAssessment){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        OASession.findElementByName("_tabSchedule").click();
-        wait.until((ExpectedCondition<Boolean>) d -> {
-            try {
-                return d.findElement(By.name("Inbox")).isEnabled();
-            } catch (WebDriverException e) {
-                // Element might temporarily disappear during refresh
-                return false;
-            }
-        });
-        OASession.findElementByName("Inbox").click();
+    public void Verify_workflow_is_created_and_displayed_in_inbox(String WName, String JobType, String IniAssessment, String Acts){
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+
         var Results_Inbox = OASession.findElementByAccessibilityId("gridInbox");
         var DGV_Headers = Results_Inbox.findElementByAccessibilityId("PART_ColumnHeadersPresenter");
-        String Name_header, JType_header, Assmt_header;
+        String Name_header, JType_header, Assmt_header, Actn_header;
 
         Name_header = DGV_Headers.findElementByName("Name").getAttribute("PositionInSet");
         JType_header = DGV_Headers.findElementByName("Job Type").getAttribute("PositionInSet");
         Assmt_header = DGV_Headers.findElementByName("Assessment").getAttribute("PositionInSet");
+        Actn_header = DGV_Headers.findElementByName("Action").getAttribute("PositionInSet");
 
         int nameIndex = Integer.parseInt(Name_header) - 1;
         int jtypeIndex = Integer.parseInt(JType_header) - 1;
         int assmtIndex = Integer.parseInt(Assmt_header) - 1;
+        int actnIndex = Integer.parseInt(Actn_header) - 1;
 
         JType_header = Integer.toString(jtypeIndex);
         Name_header = Integer.toString(nameIndex);
         Assmt_header = Integer.toString(assmtIndex);
+        Actn_header = Integer.toString(actnIndex);
 
-        wait.until((ExpectedCondition<Boolean>) d -> {
-            try {
-                d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElement(By.className("DataGridRow")).isDisplayed();
-                var newText = d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1);
-                String gridWellName = newText.getAttribute("Name");
-                boolean wellVisibility = Objects.equals(WName, gridWellName);
-                newText = null;
-                return wellVisibility;
-            } catch (WebDriverException e) {
-                // Element might temporarily disappear during refresh
-                return false;
-            }
-        });
+//        var appWellName = OASession.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1).getAttribute("Name");
+//        if (appWellName.equals(WName)) {
+//            OASession.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1).findElementByName(WName).click();}
+//            else{
+//            wait.until((ExpectedCondition<Boolean>) d -> {
+//                try {
+//                    d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElement(By.className("DataGridRow")).isDisplayed();
+//                    var newText = d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1);
+//                    String gridWellName = newText.getAttribute("Name");
+//                    boolean wellVisibility = Objects.equals(WName, gridWellName);
+//                    newText = null;
+//                    return wellVisibility;
+//                } catch (WebDriverException e) {
+//                    // Element might temporarily disappear during refresh
+//                    return false;
+//                }
+//            });
+//        }
 
         var DGV_Cells = Results_Inbox.findElementsByClassName("DataGridRow");
         for (MobileElement selWF : DGV_Cells) {
@@ -554,10 +543,15 @@ public class Producers {
                     cellIniAssmt = cell.getAttribute("Name");
 
                 }
+                if (Objects.equals(Actn_header, gridHeader)) {
+                    cellAct = cell.getAttribute("Name");
+                    //System.out.println("Action captured from grid is : "+cellAct);
+
+                }
             }
-            if (Objects.equals(cellWname, WName) && Objects.equals(cellJType, JobType) && Objects.equals(cellIniAssmt, IniAssessment)) {
+            if (Objects.equals(cellWname, WName) && Objects.equals(cellJType, JobType) && Objects.equals(cellIniAssmt, IniAssessment) && Objects.equals(cellAct, Acts)) {
                 selWF.findElementByName(WName).click();
-                System.out.println("Workflow got created for Well Name: " + WName + " with Ops --> " + JobType + "-->" + IniAssessment);
+                System.out.println("Workflow got created for Well Name: " + WName + " with Ops --> " + JobType + "-->" + IniAssessment + "-->"+Acts);
                 break;
             }
 

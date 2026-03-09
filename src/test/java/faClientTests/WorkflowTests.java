@@ -57,7 +57,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -79,7 +79,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -101,7 +101,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -124,7 +124,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -147,7 +147,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -170,7 +170,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -198,7 +198,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -224,7 +224,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -246,7 +246,7 @@ public class WorkflowTests extends FABaseTest {
         OALaunch();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"));
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
         producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
@@ -255,6 +255,54 @@ public class WorkflowTests extends FABaseTest {
         producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
         Switch_to_ParentWindow(FASession);
         nfwells.Verify_Workflow_is_Closed_Successfully();
+    }
+
+    @Test (dataProvider = "Facilities_WF")
+    public void Facilities_Workflow(HashMap<String,String> input) {
+        facilities.Navigate_to_Facilities_Screen();
+        facilities.Select_a_Well_from_FacilitiesScreen(input.get("WellName"));
+        common.Click_StartWorkflow_Button();
+        common.Start_WorkflowDlg_DataFilling(input.get("assmt"), input.get("subAssmt"),  input.get("userGroup"), input.get("actn"), input.get("SAP"), input.get("cmnt"));
+        common.Click_OK_Button();
+        facilities.Validate_FA_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        OALaunch();
+        producers.Navigate_to_MyJobs_tab();
+        producers.Navigate_to_MyJobs_Inbox();
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        producers.Click_EditJob_button();
+        producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
+        producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
+        producers.Completed_RadioButton_should_be_selected();
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        FASession.findElementByName("toolStripButton_Refresh").click();
+        facilities.Verify_Workflow_is_Closed_Successfully();
+    }
+
+    @Test (dataProvider = "GL_BadActors")
+    public void GL_BadActors_Workflow(HashMap<String,String> input) {
+        glBadActors.Navigate_to_GL_BadActors_Screen();
+        glBadActors.Select_Well_from_ExceptionsGrid(input.get("WellName"));
+        common.Click_StartWorkflow_Button();
+        common.Start_WorkflowDlg_DataFilling(input.get("assmt"), input.get("subAssmt") ,  input.get("userGroup"), input.get("actn"), input.get("SAP"), input.get("cmnt"));
+        common.Click_OK_Button();
+        glBadActors.Validate_FA_GL_BadActors_Workflow_Created_Or_Not(input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        glBadActors.Verify_well_moved_to_ReviewedGrid(input.get("WellName"));
+        OALaunch();
+        producers.Navigate_to_MyJobs_tab();
+        producers.Navigate_to_MyJobs_Inbox();
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("actn"));
+        producers.Click_EditJob_button();
+        producers.Change_Action_in_EditJobDialog(input.get("change_actn"));
+        producers.Enter_Comment_in_EditJobDialog(input.get("cmnt"));
+        producers.Select_Radio_Button_Fron_Edit_Job_Dialog("Completed");
+        producers.Click_OK_Button();
+        producers.Verify_the_Workflow_is_closed(input.get("WellName"), input.get("assmt"), input.get("subAssmt"), input.get("change_actn"));
+        Switch_to_ParentWindow(FASession);
+        FASession.findElementByName("toolStripButton_Refresh").click(); //Refreshing the FA Client for data updation or refresh
+        glBadActors.Verify_Workflow_is_Closed_Successfully();
+        glBadActors.Verify_well_moved_to_ExceptionsGrid(input.get("WellName"));
     }
 
 
@@ -310,6 +358,18 @@ public class WorkflowTests extends FABaseTest {
     @DataProvider(name="NF_WF")
     public Object[][] getNFData() throws IOException {
         List<HashMap<String, String>> data = FAUtils.getJsonData(System.getProperty("user.dir") + "//src//test//java//TestData//NF_Workflow.json");
+        return new Object[][]  {{data.get(0)}};
+    }
+
+    @DataProvider(name="Facilities_WF")
+    public Object[][] getFacilitiesData() throws IOException {
+        List<HashMap<String, String>> data = FAUtils.getJsonData(System.getProperty("user.dir") + "//src//test//java//TestData//Facilities_Workflow.json");
+        return new Object[][]  {{data.get(0)}};
+    }
+
+    @DataProvider(name="GL_BadActors")
+    public Object[][] getGLBadActorsData() throws IOException {
+        List<HashMap<String, String>> data = FAUtils.getJsonData(System.getProperty("user.dir") + "//src//test//java//TestData//BadActors.json");
         return new Object[][]  {{data.get(0)}};
     }
 }

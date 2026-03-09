@@ -129,7 +129,6 @@ public class DeferAndUnDeferTests extends FABaseTest {
 
     @Test(dataProvider = "FOP")
     public void Defer_a_well_in_FOPScreen(HashMap<String,String> input){
-        String WellName = "MID AC AF 8HD";
         fop.Navigate_to_FOPWells_Screen();
         fop.Select_Well_from_ExceptionsGrid(input.get("WellName"));
         common.Click_Defer_Button();
@@ -140,7 +139,6 @@ public class DeferAndUnDeferTests extends FABaseTest {
 
     @Test(dataProvider = "FOP", dependsOnMethods = "Defer_a_well_in_FOPScreen")
     public void UnDefer_a_well_in_FOPScreen(HashMap<String,String> input){
-        String WellName = "MID AC AF 8HD";
         fop.Navigate_to_FOPWells_Screen();
         fop.Select_Well_from_Reviewed_Tab(input.get("WellName"));
         common.Click_UnDefer_Button();

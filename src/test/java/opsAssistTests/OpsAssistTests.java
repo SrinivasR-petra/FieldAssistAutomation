@@ -36,7 +36,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.CreateSAP_Yes_No("No");
         producers.Change_Action_in_EditJobDialog(Action_Change);
@@ -57,7 +57,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.CreateSAP_Yes_No("No");
         producers.Change_Action_in_EditJobDialog(Action_Change);
@@ -76,7 +76,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
@@ -95,7 +95,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
@@ -114,7 +114,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
@@ -132,7 +132,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
@@ -151,7 +151,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
@@ -172,7 +172,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change1);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
@@ -182,7 +182,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Action_Change1);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change2);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
@@ -193,7 +193,7 @@ public class OpsAssistTests extends OABaseTest {
 
     @Test
     public void Workflow_with_NextJobAction(){
-        String wellname = "CMC PORTERHOUSE B 1062LS", JobType = "ESP Troubleshooting", IniAssessment = "Control Mode Change", Actns = ".Execute", Action_Change="Subsurface Maintenance", NextAction = "Hole in Tubing", Action_Change2 = "Completed", Comment = "Testing", Comment_Change = "Automation Testing";
+        String wellname = "CMC PORTERHOUSE B 1062LS", JobType = "ESP Troubleshooting", IniAssessment = "Control Mode Change", Actns = ".Execute", Action_Change="Subsurface Maintenance", NextAction = "Hole in Tubing", Action_Change2 = ".Diagnose/Execute", Action_Change3 = "Completed", Comment = "Testing", Comment_Change = "Automation Testing";
         producers.Navigate_to_Wells_Producers_Screen();
         producers.Select_a_Well(wellname);
         producers.Click_StartJob_Button_And_data_entry(wellname, IniAssessment, Actns, Comment);
@@ -202,7 +202,7 @@ public class OpsAssistTests extends OABaseTest {
         producers.Click_OK_Button();
         producers.Navigate_to_MyJobs_tab();
         producers.Navigate_to_MyJobs_Inbox();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname,JobType,IniAssessment,Actns);
         producers.Click_EditJob_button();
         producers.Change_Action_in_EditJobDialog(Action_Change);
         producers.Select_NextJobAction(NextAction);
@@ -211,13 +211,13 @@ public class OpsAssistTests extends OABaseTest {
         producers.Completed_RadioButton_should_be_selected();
         producers.Verify_the_NextAction_Job_Info_is_Displayed_at_bottom(Action_Change,NextAction);
         producers.Click_OK_Button();
-        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname, Action_Change, NextAction);
+        producers.Verify_workflow_is_created_and_displayed_in_inbox(wellname, Action_Change, NextAction, Action_Change2);
         producers.Click_EditJob_button();
-        producers.Change_Action_in_EditJobDialog(Action_Change2);
+        producers.Change_Action_in_EditJobDialog(Action_Change3);
         producers.Enter_Comment_in_EditJobDialog(Comment_Change);
         producers.Completed_RadioButton_should_be_selected();
         producers.Click_OK_Button();
-        producers.Verify_the_Workflow_is_closed(wellname,Action_Change,NextAction,Action_Change2);
+        producers.Verify_the_Workflow_is_closed(wellname,Action_Change,NextAction,Action_Change3);
     }
 
 }

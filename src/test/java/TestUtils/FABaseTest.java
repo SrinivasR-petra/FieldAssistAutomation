@@ -29,6 +29,8 @@ public class FABaseTest extends FAUtils {
     public static Common common;
     public static PAGL pagl;
     public static NFWells nfwells;
+    public static Facilities facilities;
+    public static GL_BadActors glBadActors;
 
     @BeforeSuite(alwaysRun = true)
     public static void setUp() throws IOException {
@@ -67,6 +69,8 @@ public class FABaseTest extends FAUtils {
             common = new Common(FASession);
             pagl = new PAGL(FASession);
             nfwells = new NFWells(FASession);
+            facilities = new Facilities(FASession);
+            glBadActors = new GL_BadActors(FASession);
 
             FASession.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //            Thread.sleep(2000);

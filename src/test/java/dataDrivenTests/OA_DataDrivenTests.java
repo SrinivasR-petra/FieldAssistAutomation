@@ -147,7 +147,7 @@ public class OA_DataDrivenTests extends OABaseTest {
                 System.out.println("Well Name:" + DwellName + " Assessment: " + assmt + " Sub-Assmt: " + subAssmt + "Changed Comment: " + editCmnt);
                 producers.Navigate_to_MyJobs_tab();
                 producers.Navigate_to_MyJobs_Inbox();
-                producers.Verify_workflow_is_created_and_displayed_in_inbox(DwellName, assmt, subAssmt);
+                producers.Verify_workflow_is_created_and_displayed_in_inbox(DwellName, assmt, subAssmt, actn);
                 producers.Click_EditJob_button();
                 producers.Change_Action_in_EditJobDialog(chng_Actn);
                 producers.Enter_Comment_in_EditJobDialog(editCmnt);

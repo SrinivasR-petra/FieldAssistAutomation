@@ -1,0 +1,12 @@
+[
+  {
+    "WellName": "HDU BLK STN 39",
+    "assmt": "Alarm",
+    "subAssmt": "Shutdown User",
+    "userGroup": "Odessa FS",
+    "actn" : ".Diagnose/Execute",
+    "change_actn" : "Clear Alarm",
+    "SAP" : "No",
+    "cmnt" : "Testing"
+  }
+]
