@@ -360,11 +360,11 @@ public class Producers {
         wait.until(ExpectedConditions.elementToBeClickable(By.name("Closed")));
         OASession.findElementByName("Closed").click();
 
-//        try {
-//            Thread.sleep(5000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         var Results_Closed = OASession.findElementByAccessibilityId("gridClosed");
         var DGV_Headers = Results_Closed.findElementByAccessibilityId("PART_ColumnHeadersPresenter");
@@ -385,25 +385,25 @@ public class Producers {
         Assmt_header = Integer.toString(assmtIndex);
         Actn_header = Integer.toString(actnIndex);
 
-//        var appWellName = OASession.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst().getAttribute("Name");
-//
-//        if (appWellName.equals(WName)) {
-//            OASession.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst().findElementByName(WName).click();
-//        }
-//        else{
-//            wait.until((ExpectedCondition<Boolean>) d -> {
-//                try {
-//                    WindowsElement newText = (WindowsElement) d.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst();
-//                    String gridWellName = newText.getAttribute("Name");
-//                    boolean wellVisibility = Objects.equals(WName, gridWellName);
-//                    newText = null;
-//                    return wellVisibility;
-//                } catch (WebDriverException e) {
-//                    // Element might temporarily disappear during refresh
-//                    return false;
-//                }
-//            });
-//        }
+        var appWellName = OASession.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst().getAttribute("Name");
+
+        if (appWellName.equals(WName)) {
+            OASession.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst().findElementByName(WName).click();
+        }
+        else{
+            wait.until((ExpectedCondition<Boolean>) d -> {
+                try {
+                    WindowsElement newText = (WindowsElement) d.findElement(new MobileBy.ByAccessibilityId("gridClosed")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).getFirst();
+                    String gridWellName = newText.getAttribute("Name");
+                    boolean wellVisibility = Objects.equals(WName, gridWellName);
+                    newText = null;
+                    return wellVisibility;
+                } catch (WebDriverException e) {
+                    // Element might temporarily disappear during refresh
+                    return false;
+                }
+            });
+        }
 
         List<MobileElement> DGV_Cells = Results_Closed.findElementsByClassName("DataGridRow");
         for (MobileElement selWF : DGV_Cells) {
@@ -480,11 +480,11 @@ public class Producers {
     }
 
     public void Verify_workflow_is_created_and_displayed_in_inbox(String WName, String JobType, String IniAssessment, String Acts){
-//        try {
-//            Thread.sleep(5000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         var Results_Inbox = OASession.findElementByAccessibilityId("gridInbox");
         var DGV_Headers = Results_Inbox.findElementByAccessibilityId("PART_ColumnHeadersPresenter");
@@ -505,24 +505,24 @@ public class Producers {
         Assmt_header = Integer.toString(assmtIndex);
         Actn_header = Integer.toString(actnIndex);
 
-//        var appWellName = OASession.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1).getAttribute("Name");
-//        if (appWellName.equals(WName)) {
-//            OASession.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1).findElementByName(WName).click();}
-//            else{
-//            wait.until((ExpectedCondition<Boolean>) d -> {
-//                try {
-//                    d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElement(By.className("DataGridRow")).isDisplayed();
-//                    var newText = d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1);
-//                    String gridWellName = newText.getAttribute("Name");
-//                    boolean wellVisibility = Objects.equals(WName, gridWellName);
-//                    newText = null;
-//                    return wellVisibility;
-//                } catch (WebDriverException e) {
-//                    // Element might temporarily disappear during refresh
-//                    return false;
-//                }
-//            });
-//        }
+        var appWellName = OASession.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1).getAttribute("Name");
+        if (appWellName.equals(WName)) {
+            OASession.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1).findElementByName(WName).click();}
+            else{
+            wait.until((ExpectedCondition<Boolean>) d -> {
+                try {
+                    d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElement(By.className("DataGridRow")).isDisplayed();
+                    var newText = d.findElement(new MobileBy.ByAccessibilityId("gridInbox")).findElements(By.className("DataGridRow")).getFirst().findElements(By.className("DataGridCell")).get(1);
+                    String gridWellName = newText.getAttribute("Name");
+                    boolean wellVisibility = Objects.equals(WName, gridWellName);
+                    newText = null;
+                    return wellVisibility;
+                } catch (WebDriverException e) {
+                    // Element might temporarily disappear during refresh
+                    return false;
+                }
+            });
+        }
 
         var DGV_Cells = Results_Inbox.findElementsByClassName("DataGridRow");
         for (MobileElement selWF : DGV_Cells) {

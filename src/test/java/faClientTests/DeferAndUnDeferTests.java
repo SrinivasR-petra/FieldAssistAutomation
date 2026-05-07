@@ -142,9 +142,29 @@ public class DeferAndUnDeferTests extends FABaseTest {
         fop.Navigate_to_FOPWells_Screen();
         fop.Select_Well_from_Reviewed_Tab(input.get("WellName"));
         common.Click_UnDefer_Button();
-        common.UnDeferDlg_Comment_entry("Defer Testing Completed");
+        common.UnDeferDlg_Comment_entry(input.get("Undef_Comment"));
         common.Click_DeferDlg_OKBtn();
         fop.Select_Well_from_ExceptionsGrid(input.get("WellName"));
+    }
+
+    @Test(dataProvider = "GL_BadActors")
+    public void Defer_a_well_in_GL_BadActorsScreen(HashMap<String,String> input){
+        glBadActors.Navigate_to_GL_BadActors_Screen();
+        glBadActors.Select_Well_from_ExceptionsGrid(input.get("WellName"));
+        common.Click_Defer_Button();
+        common.DeferDlg_details_entry(input.get("Category"), input.get("SubCategory"), input.get("Days"),input.get("Comment"));
+        common.Click_DeferDlg_OKBtn();
+        glBadActors.Verify_well_moved_to_ReviewedGrid(input.get("WellName"));
+    }
+
+    @Test(dataProvider = "GL_BadActors", dependsOnMethods = "Defer_a_well_in_GL_BadActorsScreen")
+    public void UnDefer_a_well_in_GL_BadActorsScreen(HashMap<String,String> input){
+        glBadActors.Navigate_to_GL_BadActors_Screen();
+        glBadActors.Select_Well_from_Reviewed_Tab(input.get("WellName"));
+        common.Click_UnDefer_Button();
+        common.UnDeferDlg_Comment_entry(input.get("Undef_Comment"));
+        common.Click_DeferDlg_OKBtn();
+        glBadActors.Verify_well_moved_to_ExceptionsGrid(input.get("WellName"));
     }
 
     @DataProvider(name = "Beam")
@@ -175,5 +195,11 @@ public class DeferAndUnDeferTests extends FABaseTest {
     public Object[][] FOP() throws IOException {
         List<HashMap<String, String>> data = FAUtils.getJsonData(System.getProperty("user.dir") + "//src//test//java//TestData//Defer.json");
         return new Object[][]{{data.get(4)}};
+    }
+
+    @DataProvider(name = "GL_BadActors")
+    public Object[][] GL_BadActors() throws IOException {
+        List<HashMap<String, String>> data = FAUtils.getJsonData(System.getProperty("user.dir") + "//src//test//java//TestData//Defer.json");
+        return new Object[][]{{data.get(5)}};
     }
 }

@@ -80,9 +80,9 @@ public class Common {
     private By DeferBtn = By.name("Defer");
     private By UnDeferBtn = By.name("Undefer");
 
-    private static Set<String> seenValues = new HashSet<>();
+    public static Set<String> seenValues = new HashSet<>();
 
-    private static boolean isDuplicate(String value) {
+    public static boolean isDuplicate(String value) {
         if (value.isEmpty()) return false; // Ignore empty values
         return !seenValues.add(value); // add() returns false if already exists
     }
@@ -97,7 +97,7 @@ public class Common {
             appWellName = wName.getLast().getAttribute("Value.Value");
             int wnsize = appWellName.getBytes().length;                                                             //  This block will compare the Wellname collected from Application and Wellname collected from data-sheet
             if (appWellName.equals(DWellName)) {                                                                    //              If both are equal then it'll break the loop
-                System.out.println("Well selected is : " + appWellName);
+                System.out.println("Selected with : " + appWellName);
                 seenValues.clear();                                                                                 //
                 break;                                                                                              //
             }                                                                                                       //              And continue for clicking Start Workflow button and further process.

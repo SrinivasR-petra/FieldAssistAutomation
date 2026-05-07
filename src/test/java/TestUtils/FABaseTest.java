@@ -31,6 +31,7 @@ public class FABaseTest extends FAUtils {
     public static NFWells nfwells;
     public static Facilities facilities;
     public static GL_BadActors glBadActors;
+    public static FieldDataCapture fdc;
 
     @BeforeSuite(alwaysRun = true)
     public static void setUp() throws IOException {
@@ -71,6 +72,7 @@ public class FABaseTest extends FAUtils {
             nfwells = new NFWells(FASession);
             facilities = new Facilities(FASession);
             glBadActors = new GL_BadActors(FASession);
+            fdc = new FieldDataCapture(FASession);
 
             FASession.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //            Thread.sleep(2000);

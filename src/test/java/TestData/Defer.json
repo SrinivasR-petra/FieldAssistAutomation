@@ -43,6 +43,15 @@
     "Days" : "10",
     "Comment" : "Defer Testing",
     "Undef_Comment" : "Defer Testing Completed"
+  },
+  {
+    "_comment" : "----------Gas Lift Bad Actors wells Defer info----------",
+    "WellName" : "ARTEMIS 4226H",
+    "Category" : "Surface Facility Constraint",
+    "SubCategory" : "Facility Curtailment",
+    "Days" : "10",
+    "Comment" : "Defer Testing",
+    "Undef_Comment" : "Defer Testing Completed"
   }
 
 ]
